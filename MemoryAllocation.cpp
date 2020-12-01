@@ -36,11 +36,11 @@ static void PrintMemoryUsage()
 int main()
 {
 	PrintMemoryUsage();
-	std::string string = "Harrison";
+	std::string string = "Harrison"; //Example of creating a string to show memory allocation
 	PrintMemoryUsage();
 	{
-		std::unique_ptr<Object> obj = std::make_unique<Object>();
+		std::unique_ptr<Object> obj = std::make_unique<Object>(); //Example of using unqiue_ptr which calls new behind the scenes to show memory allocation
 		PrintMemoryUsage();
 	}
-	PrintMemoryUsage();
+	PrintMemoryUsage(); // calling printMemoryUsage to show where and how you can use the "cout" statements 
 }
